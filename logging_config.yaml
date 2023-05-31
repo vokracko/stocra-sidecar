@@ -1,0 +1,13 @@
+formatters:
+  bunyan:
+    "()": bunyan.BunyanFormatter
+handlers:
+  debug:
+    class: logging.StreamHandler
+    formatter: bunyan
+    stream: ext://sys.stdout
+root:
+  level: DEBUG
+  handlers:
+  - debug
+version: 1

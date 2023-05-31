@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -xe
+
+CHECK=$1
+
+isort sidecar ${CHECK}
+black sidecar ${CHECK}
+pylint sidecar 
+mypy sidecar 
